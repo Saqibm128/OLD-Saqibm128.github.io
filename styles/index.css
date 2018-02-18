@@ -7,10 +7,18 @@ ul {
 a {
   color: black;
 }
-
+/*
 .menu {
   position:fixed;
   left:0;
   right:0;
   z-index:2;
+} */
+
+.carousel-caption p {
+  color: black;
+}
+
+.carousel-caption h1 {
+  color: black;
 }
