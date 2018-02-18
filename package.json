@@ -1,0 +1,11 @@
+{
+  "name": "portfolio_page",
+  "version": "1.0.0",
+  "description": "My First Real Portfolio Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "node serve index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
