@@ -4,7 +4,6 @@
   "description": "My First Real Portfolio Page",
   "main": "index.js",
   "scripts": {
-    "test": "node serve index.html"
   },
   "author": "",
   "license": "ISC"

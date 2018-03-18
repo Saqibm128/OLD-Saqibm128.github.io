@@ -1,11 +1,13 @@
 body {
   background: grey;
 }
-ul {
-  background: white;
-}
+
 a {
   color: black;
+}
+
+h1 {
+
 }
 /*
 .menu {
@@ -14,6 +16,14 @@ a {
   right:0;
   z-index:2;
 } */
+
+.carousel-caption {
+    font-family: 'Lilita One', cursive;
+}
+
+.hard-to-see {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 
 .carousel-caption p {
   color: black;
