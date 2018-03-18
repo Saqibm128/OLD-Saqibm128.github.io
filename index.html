@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="First Real Portfolio Site">
   <meta name="author" content="Mohammed Saqib">
+  <link rel="icon" href="img/favicon.ico">
   <title>Mohammed Saqib</title>
   <link rel="stylesheet" href="styles/carousel.css" />
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/animation.css">
   <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="src/index.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="menu">
@@ -85,39 +90,63 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </d iv>
+    </div>
 
-      <div class="content text-center">
-
-
-
-        <div id="about">
-          <h1>About me</h1>
-          <p>I am a student at Georgia Tech. This is a practice portfolio page. Enjoy!</p>
+    <div class="content text-center">
+      <br>
+      <br>
+      <div id="about">
+        <h1 class="toggle">About me</h1>
+        <p>I am a third year student at Georgia Tech. I am currently working at <a href="https://Patientco.com">Patientco</a> for my Spring 2018 rotation.</p>
+        <p>I am majoring in both Biomedical Engineering and Computer Science currently.</p>
+        <div class="row">
+          <div class="BME col">
+            <button class="btn" id="choose-bme" class='choose-a-major-already'>
+              BME
+            </button>
+            <div class="to-hide">
+              BME rocks!
+            </div>
+          </div>
+          <div class="BME-CS col">
+            <button class="btn" id="choose-both" class='choose-a-major-already'>
+              Both
+          </button>
+          <div class="to-hide">
+            Its like PB&J.
+          </div>
+          </div>
+          <div class="CS col">
+            <button class="btn"  id="choose-cs" class='choose-a-major-already'>
+              CS
+        </button>
+        <div class="to-hide">
+          Go CS!
         </div>
-
-
-        <br>
-        <br>
-        <div id="portfolio">
-          <h1>This is an amazing website. Because it was my first website. That is all.</h1>
-        </div>
-
-
-        <div id="contact">
-          <h3 class="text-center">Contact me at <a href="mailto:saqibm128@gmail.com">saqibm128@gmail.com</a></h3>
-          <div class="row text-center">
-
-<!-- Add font awesome icons -->
-            <a href="https://www.facebook.com/momo.saqib.9"></a>
-            <a href="https://www.linkedin.com/in/mohammed-saqib-39b019b9"></a>
-            <a href="https://github.com/Saqibm128"></a>
           </div>
         </div>
-
-
-
       </div>
+      <br>
+      <br>
+      <div id="portfolio">
+        <h1>This is an amazing website. Because it was my first website. That is all.</h1>
+      </div>
+      <br>
+      <br>
+      <div id="contact">
+        <h3 class="text-center">Contact me at <a href="mailto:saqibm128@gmail.com">saqibm128@gmail.com</a></h3>
+        <div class="row text-center">
+
+          <!-- Add font awesome icons -->
+          <a href="https://www.facebook.com/momo.saqib.9"></a>
+          <a href="https://www.linkedin.com/in/mohammed-saqib-39b019b9"></a>
+          <a href="https://github.com/Saqibm128"></a>
+        </div>
+      </div>
+
+
+
+    </div>
   </main>
 </body>
 
