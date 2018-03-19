@@ -65,6 +65,13 @@ h1 {}
   background-color: #2980b9;
 }
 
+.portfolio.col {
+    background-color: #06EAC9;
+    margin: 3px 3px 3px 3px;
+    border-radius: 3px;
+
+}
+
 #contact {
   background-color: #e67e22;
 }

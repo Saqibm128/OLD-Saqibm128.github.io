@@ -1,7 +1,7 @@
 {
   "name": "portfolio_page",
   "version": "1.0.0",
-  "description": "My First Real Portfolio Page",
+  "description": "My First Real Portfolio Page; wait why do i need a package.json for this?",
   "main": "index.js",
   "scripts": {
   },
