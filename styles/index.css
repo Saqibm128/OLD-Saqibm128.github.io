@@ -65,8 +65,12 @@ h1 {}
   background-color: #2980b9;
 }
 
+img {
+  max-width: 100%
+}
+
 .portfolio.col {
-    background-color: #06EAC9;
+    background-color: #16a085;
     margin: 3px 3px 3px 3px;
     border-radius: 3px;
 
