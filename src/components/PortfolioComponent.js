@@ -26,7 +26,10 @@ class PortfolioComponent extends Component {
     ]
   }
   render() {
-    var portfolioItemList = this.dataItems.map((item, ind) => <PortfolioItemComponent key={ind} data={item}/>)
+    var portfolioItemList = this.dataItems.map((item, ind) => {
+
+      return <PortfolioItemComponent key={ind} data={item}/>
+    })
 
     return (
       <div id='portfolio'>

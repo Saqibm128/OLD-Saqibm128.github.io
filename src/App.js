@@ -15,7 +15,8 @@ class App extends Component {
 
           <header className='App-header'>
             <MenuHeading/>
-            <h1 className='App-title'>Mohammed Saqib</h1>
+            <h1 className='App-title'>Mohammed Saqib: Developer, Engineer, Fixer</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
           </header>
           <MainComponent />
           </div>

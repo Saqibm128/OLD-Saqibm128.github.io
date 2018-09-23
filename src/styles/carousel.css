@@ -11,6 +11,9 @@ body {
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
+.container {
+
+}
 
 /* Carousel base class */
 .carousel {
@@ -19,7 +22,17 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
-  z-index: 10;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  opacity: .8;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.carousel-caption:hover, .carousel-caption:focus {
+  background: #7da6a2;
+  opacity: .9;
 }
 
 /* Declare heights because of positioning of img element */

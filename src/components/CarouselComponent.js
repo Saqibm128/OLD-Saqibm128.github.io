@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 
 class CarouselComponent extends Component {
   render() {
+    console.log(this.props.subComponents)
     var carouselItems = this.props.subComponents.map((compData, id) => (<div key={id} className={id === 0  ? 'carousel-item active' : 'carousel-item'}>
-      <img src='{compData.img}'/>
+      <img src={compData.imgLink}/>
       <div className='container'>
         <div className='carousel-caption'>
           <h1 className='hard-to-see'>{compData.title}</h1>

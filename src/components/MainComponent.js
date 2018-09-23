@@ -10,7 +10,7 @@ class MainComponent extends Component {
       {
         id: 'about',
         component: <AboutComponent/>,
-        img: '',
+        imgLink: '',
         hreflink: '#about',
         title: 'About Me',
         description: 'Personal details, goals & descriptions',
@@ -18,7 +18,7 @@ class MainComponent extends Component {
       }, {
         id: 'portfolio',
         component: <PortfolioComponent/>,
-        img: '',
+        imgLink: 'img/technology.jpg',
         hreflink: '#portfolio',
         title: 'Projects',
         description: 'Informative studies, interesting POCs & exciting implementations',
@@ -26,7 +26,7 @@ class MainComponent extends Component {
       }, {
         id: 'contact',
         component: <ContactComponent/>,
-        img: '',
+        imgLink: '',
         hreflink: '#contact',
         title: 'Contact Me',
         description: 'More sites & contact info',
@@ -39,7 +39,8 @@ class MainComponent extends Component {
       <div>
         <main role='main'>
           <CarouselComponent subComponents={this.subComponents}/> {this.subComponents.map((subComp) => (
-            <div key={subComp.id}>{subComp.component}</div>
+            <div key={subComp.id}>{subComp.component}
+            </div>
           ))}
         </main>
       </div>

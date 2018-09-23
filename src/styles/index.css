@@ -46,7 +46,7 @@ h1 {}
 }
 
 .hard-to-see {
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
 }
 
 .carousel-caption p {
@@ -78,4 +78,79 @@ img {
 
 #contact {
   background-color: #e67e22;
+}
+
+.portfolio-image {
+  width: 80%;
+  height: 40%
+}
+.hidden {
+  opacity: .0
+}
+
+.visible {
+  opacity: 1
+}
+
+div.port-item {
+  transition: 1s;
+}
+
+div.port-item:hover {
+  background-color: #06EAC9;
+}
+.contact-icon {
+  width: 30%;
+  height: 30%;
+}
+
+@-webkit-keyframes arrowAnimation {
+  0% { left:50%; }
+  45% { left:100%; }
+  55% { left:100%;
+    transform: scaleX(-1);
+   }
+  100% {
+    transform: scaleX(1);
+  }
+
+}
+@-o-keyframes arrowAnimation {
+  0% { left:50%; }
+  45% { left:100%; }
+  55% { left:100%;
+    transform: scaleX(-1);
+   }
+  100% {
+    transform: scaleX(1);
+  }
+
+}
+@-moz-keyframes arrowAnimation {
+  0% { left:50%; }
+  45% { left:100%; }
+  55% { left:100%;
+    transform: scaleX(-1);
+   }
+  100% {
+    transform: scaleX(1);
+  }
+
+}
+@keyframes arrowAnimation {
+  0% { left:50%; }
+  45% { left:100%; }
+  55% { left:100%;
+    transform: scaleX(-1);
+   }
+  100% {
+    transform: scaleX(1);
+  }
+
+}
+.hack-arrow {
+  fill: #06EAC9;
+  transition: 10s;
+  animation: arrowAnimation Infinite;
+  animation-duration: 10s;
 }
