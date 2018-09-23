@@ -1,19 +1,21 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
-import BootstrapScript from './components/BootstrapScripts.js'
+import MenuHeading from './components/MenuHeading.js'
+import MainComponent from './components/MainComponent.js'
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <BootstrapScript />
-        <header className="App-header">
-          <h1 className="App-title">Mohammed Saqib</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <body data-spy="scroll" data-target="menu">
+          <header className="App-header">
+            <MenuHeading/>
+            <h1 className="App-title">Mohammed Saqib</h1>
+          </header>
+          <MainComponent />
+        </body>
       </div>
     );
   }
