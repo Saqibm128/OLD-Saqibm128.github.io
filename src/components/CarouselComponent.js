@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class CarouselComponent extends Component {
   render() {
-    var carouselItems = this.props.subComponents.map((compData, id) => (<div key={id} className={id == 0  ? 'carousel-item active' : 'carousel-item'}>
+    var carouselItems = this.props.subComponents.map((compData, id) => (<div key={id} className={id === 0  ? 'carousel-item active' : 'carousel-item'}>
       <img src='{compData.img}'/>
       <div className='container'>
         <div className='carousel-caption'>
@@ -19,7 +19,7 @@ class CarouselComponent extends Component {
         <ol className='carousel-indicators'>
           {
             this.props.subComponents.map((compData, id) => {
-            if (id == 0) {
+            if (id === 0) {
               return <li key={id} data-target='#mainCarousel' data-slide-to={id} className='active'></li>
             }
             return <li key={id} data-target='#mainCarousel' data-slide-to={id}></li>
