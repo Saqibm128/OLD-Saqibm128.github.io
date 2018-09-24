@@ -1,17 +1,17 @@
 import React, {Component} from 'react'
 
 class AcknowledgementComponent extends Component {
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     return (
       <div className='content text-center'>
-        <div id='about'>
-          <br/>
-          <br/>
-          <img src='img/slightlyBetterProfilePic.jpg' />
-          <h1 className='toggle'>About me</h1>
-          <p>I am a fourth year student at Georgia Tech. I am currently working at <a href='https://Patientco.com'>Patientco</a> for my Spring 2018 rotation.</p>
-          <p>I am majoring in both Biomedical Engineering and Computer Science currently.</p>
+        <div className='acknowledgments'>
+          <p>Photos were taken from following sources:
+          {this.props.links.map((link) => (" " + link))}
+          </p>
         </div>
       </div>
     )

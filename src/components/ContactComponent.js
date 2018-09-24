@@ -15,7 +15,6 @@ class ContactComponent extends Component {
       <div id='contact'>
               <h3 className='text-center'>Contact me at <a href='mailto:saqibm128@gmail.com'>saqibm128@gmail.com</a></h3>
               <div className='row text-center'>
-
                 {this.contacts.map((cont, i) => (<div key={i}><a href={cont.urlLink}><img src={cont.iconlink} className='contact-icon' /></a></div>))}
               </div>
             </div>

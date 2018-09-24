@@ -9,7 +9,7 @@ class PortfolioComponent extends Component {
         url: 'http://ec2-18-217-140-91.us-east-2.compute.amazonaws.com:8000/',
         imgLink: 'img/candyProject.png',
         name: 'Candy Visualization',
-        description: 'A multigraph data visualization of survey data of favorite candies.'
+        description: 'A multigraph data visualization of survey data of favorite candies.',
       }, {
         idName: 'BHIProject',
         url: 'https://github.com/Saqibm128/BHIProject',
@@ -24,16 +24,18 @@ class PortfolioComponent extends Component {
         description: 'A JavaFX program for playing a 3x3x3 game of Tic Tac Toe'
       }
     ]
+    this.state = {dataItems: this.dataItems}
   }
   render() {
-    var portfolioItemList = this.dataItems.map((item, ind) => {
+    var portfolioItemList = this.state.dataItems.map((item, ind) => {
 
-      return <PortfolioItemComponent key={ind} data={item}/>
+      return (<PortfolioItemComponent key={ind} data={item}/>)
     })
 
     return (
       <div id='portfolio'>
-        <h1>This is an amazing website. Because it was my first website.</h1>
+        <h1>I enjoy experimenting with a lot of cool technologies over the past few years.</h1>
+        <p>I have also done a lot of project in classes throughout my time at Georgia Tech.</p>
         <div className='row portfolio'>
           {portfolioItemList}
         </div>
