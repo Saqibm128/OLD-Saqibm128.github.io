@@ -180,12 +180,13 @@ div.port-item:hover {
   transition: 0.8s;
   border-radius: 3px;
   color: black;
-  margin: 20px 20px 20px 20px;
+  /* margin: 20px 20px 20px 20px; */
 
 }
 
 .acknowledgments {
   font-size: 8px;
+
 }
 
 .container:hover {
