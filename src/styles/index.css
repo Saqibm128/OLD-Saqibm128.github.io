@@ -5,7 +5,15 @@ body {
   border-radius: 3px;
 }
 
-.nav-item:hover {
+.nav-item {
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.nav-item:hover, .nav-item:active {
   background: rgb(128, 128, 128);
 }
 
@@ -99,7 +107,7 @@ div.port-item {
   transition: 1s;
 }
 
-div.port-item:hover {
+div.port-item:hover, div.port-item:active {
   background-color: #06EAC9;
 }
 .contact-icon {
@@ -166,7 +174,7 @@ div.port-item:hover {
   opacity: .7;
 }
 
-.carousel-caption:hover, .carousel-caption:focus {
+.carousel-caption:hover, .carousel-caption:active, .carousel-caption:focus {
   background: #7da6a2;
   opacity: .9;
 }
@@ -175,7 +183,7 @@ div.port-item:hover {
   opacity: 1;
 }
 
-.container {
+.container-item {
   background-color: #16a085;
   transition: 0.8s;
   border-radius: 3px;
@@ -189,7 +197,7 @@ div.port-item:hover {
 
 }
 
-.container:hover {
+.container-item:hover, .container-item:active {
   background-color: #06EAC9;
 }
 

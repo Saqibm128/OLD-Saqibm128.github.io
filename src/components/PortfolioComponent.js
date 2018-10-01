@@ -4,6 +4,10 @@ class PortfolioComponent extends Component {
   constructor(props) {
     super(props)
     this.dataItems = [
+      // {
+      //   idname: 'website',
+      //   url: ''
+      // },
       {
         idName: 'sepsisResearch',
         url: 'https://github.com/saqibm128/sepsisProject',
@@ -67,7 +71,7 @@ class PortfolioComponent extends Component {
       <div id='portfolio'>
         <h1>I enjoy experimenting with a lot of cool technologies over the past few years.</h1>
         <p>I have also done a lot of project in classes throughout my time at Georgia Tech.</p>
-        <div className='row portfolio'>
+        <div className='container portfolio'>
           {portfolioItemList}
         </div>
         <br/>

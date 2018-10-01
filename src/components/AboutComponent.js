@@ -11,15 +11,15 @@ class AboutComponent extends Component {
   }
   render() {
     return (
-      <div className='content text-center'>
+      <div className='content text-center container'>
         <div id='about'>
           <br/>
           <br/>
           <div className='row'>
-            <div className='col col-xs-6'>
+            <div className='col'>
               <img src='img/slightlyBetterProfilePic.jpg'/>
             </div>
-            <div className='col col-xs-6 container'>
+            <div className='col container-item'>
 
               <h1>About Me</h1>
               <p>I am a fourth year student at Georgia Tech. I am currently working at
