@@ -4,10 +4,6 @@ class PortfolioComponent extends Component {
   constructor(props) {
     super(props)
     this.dataItems = [
-      // {
-      //   idname: 'website',
-      //   url: ''
-      // },
       {
         idName: 'sepsisResearch',
         url: 'https://github.com/saqibm128/sepsisProject',
@@ -22,6 +18,12 @@ class PortfolioComponent extends Component {
         imgLink: 'img/candyProject.png',
         name: 'Candy Visualization',
         description: 'A multigraph data visualization of survey data of favorite candies.'
+      }, {
+        idName: 'portfolioPage',
+        url: 'https://github.com/Saqibm128/Saqibm128.github.io/tree/react',
+        imgLink: 'img/portfolioSite.png',
+        name: 'Portfolio Website',
+        description: 'This Website! My portfolio driven by React and Bootstrap'
       }, {
         idName: 'ticTacToeRobot',
         url: 'https://github.com/Saqibm128/3790-cozmo',
@@ -42,6 +44,12 @@ class PortfolioComponent extends Component {
         name: 'ECG Grapher, Analyzer',
         description: 'An implementation of PQRS identifier for ECG signals, in both MatLab and LabView'
       }, {
+        idName: 'movieSelector',
+        url: 'https://github.com/JavaTheHutt2340/MovieSelector',
+        imgLink: 'img/movieSelector.png',
+        name: 'Movie Selector Android App',
+        description: '2340 Group Project to do advanced querying on Rotten Tomatoes API and to share movies on Facebook'
+      }, {
         idName: 'ultimateTicTacToe',
         url: 'https://github.com/Saqibm128/UltimateTicTacToe',
         imgLink: 'img/ultimateTicTacToe.png',
@@ -55,14 +63,27 @@ class PortfolioComponent extends Component {
   }
   render() {
     var portfolioItemList = []
-    for (var i = 0; i < Math.ceil(this.state.dataItems.length / 3.0); i++) {
+    var i = 0;
+    //gonna hardcode in some **special** items first
+    for (i = i; i < 1; i++) {
+    portfolioItemList.push(
+        <div className='row portfolio'>
+          <PortfolioItemComponent key={this.state.dataItems[i].idName} data={this.state.dataItems[i]}/>
+            <PortfolioItemComponent key={this.state.dataItems[i + 1].idName} data={this.state.dataItems[i + 1]}/>
 
-      var end = i * 3 + 3 < this.state.dataItems.length
-        ? i * 3 + 3
+        </div>
+      );
+    }
+    i++;
+
+    for (i = i; i < this.state.dataItems.length; i+=3) {
+
+      var end = i + 3 < this.state.dataItems.length
+        ? i + 3
         : this.state.dataItems.length
       portfolioItemList.push(
         <div className='row portfolio'>
-          {this.state.dataItems.slice(i * 3, end).map((item) => <PortfolioItemComponent key={item.idName} data={item}/>)}
+          {this.state.dataItems.slice(i, end).map((item) => <PortfolioItemComponent key={item.idName} data={item}/>)}
         </div>
       )
     }

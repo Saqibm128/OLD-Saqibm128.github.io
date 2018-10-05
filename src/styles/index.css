@@ -205,6 +205,15 @@ div.port-item:hover, div.port-item:active {
   font-family: 'Cardo', regular;
 }
 
+.minor-about-me {
+  font-size: 14px;
+}
+
+.portfolio img {
+  max-height: 300px;
+  height: auto;
+}
+
 #navbarCollapse:hover {
   opacity: 1;
 }
