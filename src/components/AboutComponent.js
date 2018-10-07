@@ -40,7 +40,7 @@ class AboutComponent extends Component {
             <h2>README.md</h2>
             </div>
             { this.state.showReadMe &&
-            <div className='revealMe read-me container'>
+            <div className='revealMe read-me container-item text-left markdown-body'>
               <ol>
                 <li>Friends call me Momo.</li>
                 <li>I want to be useful and I want to learn. I like to ask questions, even if the answer is obvious.</li>
@@ -54,6 +54,8 @@ class AboutComponent extends Component {
             </div>
           }
           </div>
+          <br />
+          <br />
         </div>
       </div>
     )

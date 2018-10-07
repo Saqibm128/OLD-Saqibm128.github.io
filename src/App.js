@@ -6,6 +6,9 @@ import AboutComponent from './components/AboutComponent.js'
 import PortfolioComponent from './components/PortfolioComponent.js'
 import ContactComponent from './components/ContactComponent.js'
 import AcknowledgementComponent from './components/AcknowledgementComponent.js'
+import ExperiencesComponent from './components/ExperiencesComponent.js'
+import ResumeComponent from './components/ResumeComponent.js'
+
 import './App.css';
 import './styles/carousel.css';
 import './styles/animation.css';
@@ -14,15 +17,23 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.acknowledgments = ["https://proturbo.ro/contact/", "https://en.wikipedia.org/wiki/Coffee"]
+    this.acknowledgments = ["https://proturbo.ro/contact/", "https://en.wikipedia.org/wiki/Coffee", "http://www.openculture.com/2015/03/the-story-of-lorem-ipsum.html"]
     this.subComponents = [
       {
         id: 'about',
         component: <AboutComponent/>,
-      imgLink: 'img/coffee.jpg',
+        imgLink: 'img/coffee.jpg',
         hreflink: '#about',
         title: 'About Me',
         description: 'Personal details, goals & descriptions',
+        button: 'Learn More'
+      }, {
+        id: 'experiences',
+        component: <ExperiencesComponent />,
+      imgLink: 'img/experiences.png',
+        hreflink: '#experiences',
+        title: 'Experiences',
+        description: 'Companies, Responsibilities and Other Work Experiences',
         button: 'Learn More'
       }, {
         id: 'portfolio',
@@ -33,13 +44,22 @@ class App extends Component {
         description: 'Informative studies, interesting POCs & exciting implementations',
         button: 'Learn More'
       }, {
+        id: 'resume',
+        component: <ResumeComponent/>,
+      imgLink: 'img/resume.png',
+        hreflink: '#resume',
+        title: 'Resume',
+        description: 'A formal resume',
+        button: 'PDF Here!'
+      },
+      {
         id: 'contact',
         component: <ContactComponent/>,
       imgLink: 'img/contact_us.png',
         hreflink: '#contact',
         title: 'Contact Me',
         description: 'More sites & contact info',
-        button: 'Learn More'
+        button: 'Get In Touch!'
       }
     ]
     this.typingEffect = this.typingEffect.bind(this)

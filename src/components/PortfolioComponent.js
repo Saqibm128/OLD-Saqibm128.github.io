@@ -23,7 +23,7 @@ class PortfolioComponent extends Component {
         url: 'https://github.com/Saqibm128/Saqibm128.github.io/tree/react',
         imgLink: 'img/portfolioSite.png',
         name: 'Portfolio Website',
-        description: 'This Website! My portfolio driven by React and Bootstrap'
+        description: 'This Website! My portfolio driven by React and Bootstrap and hacked up over two weekends'
       }, {
         idName: 'ticTacToeRobot',
         url: 'https://github.com/Saqibm128/3790-cozmo',
@@ -36,7 +36,7 @@ class PortfolioComponent extends Component {
         url: 'https://github.com/Saqibm128/BHIProject',
         imgLink: 'img/ebola.png',
         name: 'Ebola Model Simulation',
-        description: 'A GUI for modeling the 2014 Ebola epidemic'
+        description: 'A GUI for modeling the 2014 Ebola epidemic in West Africa'
       }, {
         idName: 'ECG Grapher',
         url: 'https://github.com/Saqibm128/pqrs-identifier',

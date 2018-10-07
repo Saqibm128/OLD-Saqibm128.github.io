@@ -2,13 +2,15 @@ import React, {Component} from 'react'
 class ContactComponent extends Component {
   constructor(props) {
     super(props)
-    this.contacts = [{
-      urlLink: 'https://www.linkedin.com/in/mohammed-saqib-39b019b9',
-      iconlink: 'img/linkedin.png'
-    },{
-      urlLink: 'https://github.com/Saqibm128',
-      iconlink: 'img/github.jpg'
-    }]
+    this.contacts = [
+    //   {
+    //   urlLink: 'https://www.linkedin.com/in/mohammed-saqib-39b019b9',
+    //   iconlink: 'img/linkedin.png'
+    // },{
+    //   urlLink: 'https://github.com/Saqibm128',
+    //   iconlink: 'img/github.jpg'
+    // }
+  ]
   }
   render() {
     return (
