@@ -171,12 +171,18 @@ div.port-item:hover, div.port-item:active {
 
 .carousel-caption {
   background: #7da6a2;
-  opacity: .7;
+  opacity: .75;
 }
 
 .carousel-caption:hover, .carousel-caption:active, .carousel-caption:focus {
   background: #7da6a2;
-  opacity: .9;
+  opacity: .95;
+}
+
+@media screen and (max-width: 375px) {
+  .carousel-caption  {
+  opacity: 0.95
+}
 }
 
 .hard-to-see, .carousel-caption h1, .carousel-caption p {
