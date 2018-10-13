@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import MenuHeading from './components/MenuHeading.js'
-import MainComponent from './components/MainComponent.js'
 import AboutComponent from './components/AboutComponent.js'
 import PortfolioComponent from './components/PortfolioComponent.js'
 import ContactComponent from './components/ContactComponent.js'
 import AcknowledgementComponent from './components/AcknowledgementComponent.js'
 import ExperiencesComponent from './components/ExperiencesComponent.js'
 import ResumeComponent from './components/ResumeComponent.js'
-
+import CarouselComponent from './components/CarouselComponent.js'
 import './App.css';
 import './styles/carousel.css';
 import './styles/animation.css';
@@ -17,7 +16,7 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.acknowledgments = ["https://proturbo.ro/contact/", "https://en.wikipedia.org/wiki/Coffee", "http://www.openculture.com/2015/03/the-story-of-lorem-ipsum.html"]
+    this.acknowledgments = ["https://proturbo.ro/contact/", "https://en.wikipedia.org/wiki/Coffee", "http://www.openculture.com/2015/03/the-story-of-lorem-ipsum.html", "http://www.comm.gatech.edu/brand/visual"]
     this.subComponents = [
       {
         id: 'about',
@@ -63,40 +62,53 @@ class App extends Component {
       }
     ]
     this.typingEffect = this.typingEffect.bind(this)
-    this.state = {myDesc : "Developer, Engineer, Fixer", i: 0}
+    this.state = {
+      myDesc : "Developer, Engineer, Fixer",
+      i: 0,
+      activeState: 'about'
+    }
     this.speed = 1000
   }
 
 
-  typingEffect() {
-    var fullDesc = "Developer, Engineer, Fixer"
-    this.setState((state) => {
-      if (state.i < fullDesc.length) {
-        state.myDesc = fullDesc.substring(0,state.i)
-      } else {
-        state.myDesc = fullDesc
-      }
-      state.i = state.i + 1
-      // if (state.i % 2 == 0) {
-        state.myDesc = state.myDesc + " |"
-      // } else {
-      //   state.myDesc = state.myDesc + "  "
-      // }
-      setTimeout(this.typingEffect, this.speed)
-      return state
-    })
-}
+    typingEffect() {
+      var fullDesc = "Developer, Engineer, Fixer"
+      this.setState((state) => {
+        if (state.i < fullDesc.length) {
+          state.myDesc = fullDesc.substring(0,state.i)
+        } else {
+          state.myDesc = fullDesc
+        }
+        state.i = state.i + 1
+        // if (state.i % 2 == 0) {
+          state.myDesc = state.myDesc + " |"
+        // } else {
+        //   state.myDesc = state.myDesc + "  "
+        // }
+        setTimeout(this.typingEffect, this.speed)
+        return state
+      })
+  }
+  isInViewport(offset = 0) {
+    if (!this.yourElement) return false;
+    const top = this.yourElement.getBoundingClientRect().top;
+    return (top + offset) >= 0 && (top - offset) <= window.innerHeight;
+  }
   render() {
     // setTimeout(this.typingEffect, 50)
     return (
           <div className='App'>
-
           <header className='App-header'>
-            <MenuHeading subComponents={this.subComponents}/>
+            <MenuHeading subComponents={this.subComponents} activeState={this.state.activeState}/>
             <h1 className='App-title'>Mohammed Saqib: {this.state.myDesc}</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
           </header>
-          <MainComponent subComponents={this.subComponents}/>
+          <CarouselComponent subComponents={this.subComponents}/>
+          {this.subComponents.map((subComp) => (
+            <div key={subComp.id}>
+              {subComp.component}
+            </div>
+          ))}
           <AcknowledgementComponent links={this.acknowledgments} />
           </div>
 

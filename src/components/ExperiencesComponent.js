@@ -27,7 +27,15 @@ class ExperiencesComponent extends Component {
         technologies: ["Java", "Android"],
         imgLink: "img/cs2340.png"
         // hrefLink: "https://miblab.bme.gatech.edu/people/"
-      },
+      }, {
+          id: "education",
+          title: 'Georgia Tech Undergraduate Student',
+          description: 'I am finishing my B.S. in Comp. Science and Biomed. Engineering.',
+          detailedDescription: 'I wanted to challenge myself and try to expose myself. I\'ve learned cool facts, done cool projects, and met amazing people.',
+          technologies: ["Java", "Android", "Python", "C"],
+          imgLink: "img/gt-logo.png"
+          // hrefLink: "https://miblab.bme.gatech.edu/people/"
+        },
 
     ]
   }

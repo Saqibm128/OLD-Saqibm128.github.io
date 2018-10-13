@@ -4,9 +4,12 @@ class MenuHeading extends Component {
   constructor(props) {
     super(props)
     this.updateNavbar = this.updateNavbar.bind(this)
+    this.state = {'active': props.activeState}
   }
   updateNavbar() {
     //TODO: fix this code to make navbar opaque when scrolled to top
+    //Update active nav-item active depending on which item is shown
+
   }
   render() {
     return (
@@ -17,7 +20,7 @@ class MenuHeading extends Component {
           <div className='collapse navbar-collapse' id='navbarCollapse'>
             <ul className='navbar-nav mr-auto'>
               {this.props.subComponents.map((subComp, index) => (
-                <li key={subComp.title} className={index === 0 ? 'nav-item active' : 'nav-item'}>
+                <li key={subComp.title} id={subComp.id + "_nav"} className={subComp.id === this.state.active ? 'nav-item active' : 'nav-item'}>
                   <a className='nav-link' href={subComp.hreflink}>{subComp.title}</a>
                 </li>
               ))}
