@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
 
 class CarouselComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.subComponents = props.subComponents.filter((compData) => (!!compData.imgLink))
+
+  }
   render() {
-    console.log(this.props.subComponents)
-    var carouselItems = this.props.subComponents.map((compData, id) => (<div key={id} className={id === 0  ? 'carousel-item active' : 'carousel-item'}>
+    var carouselItems = this.subComponents.map((compData, id) => (<div key={id} className={id === 0  ? 'carousel-item active' : 'carousel-item'}>
       <img src={compData.imgLink}/>
       <div>
         <div className='carousel-caption'>
@@ -19,7 +23,7 @@ class CarouselComponent extends Component {
       <div id='mainCarousel' className='carousel slide' data-ride='carousel'>
         <ol className='carousel-indicators'>
           {
-            this.props.subComponents.map((compData, id) => {
+            this.subComponents.map((compData, id) => {
             if (id === 0) {
               return <li key={id} data-target='#mainCarousel' data-slide-to={id} className='active'></li>
             }

@@ -67,7 +67,7 @@ class PortfolioComponent extends Component {
     //gonna hardcode in some **special** items first
     for (i = i; i < 1; i++) {
     portfolioItemList.push(
-        <div className='row portfolio'>
+        <div className='row portfolio' key={i}>
           <PortfolioItemComponent key={this.state.dataItems[i].idName} data={this.state.dataItems[i]}/>
             <PortfolioItemComponent key={this.state.dataItems[i + 1].idName} data={this.state.dataItems[i + 1]}/>
 
@@ -82,7 +82,7 @@ class PortfolioComponent extends Component {
         ? i + 3
         : this.state.dataItems.length
       portfolioItemList.push(
-        <div className='row portfolio'>
+        <div className='row portfolio' key={i}>
           {this.state.dataItems.slice(i, end).map((item) => <PortfolioItemComponent key={item.idName} data={item}/>)}
         </div>
       )

@@ -48,7 +48,7 @@ class ExperiencesComponent extends Component {
           <div id={item.id} key={item.id}>
         <div  className='row experience container-item'>
           {item.imgLink &&
-            <div className="col-3">
+            <div className="col-3 text-center">
               <img src={item.imgLink}/>
           </div>
         }

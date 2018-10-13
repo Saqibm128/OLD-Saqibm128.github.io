@@ -4,6 +4,10 @@ body {
   font-family: 'Oswald', regular;
   border-radius: 3px;
 }
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
 
 .nav-item {
   font-size: 1.25rem;

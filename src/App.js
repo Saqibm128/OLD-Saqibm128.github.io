@@ -19,6 +19,11 @@ class App extends Component {
     this.acknowledgments = ["https://proturbo.ro/contact/", "https://en.wikipedia.org/wiki/Coffee", "http://www.openculture.com/2015/03/the-story-of-lorem-ipsum.html", "http://www.comm.gatech.edu/brand/visual"]
     this.subComponents = [
       {
+        id: 'header',
+        title: 'Mohammed Saqib',
+        hreflink: '#header'
+      },
+      {
         id: 'about',
         component: <AboutComponent/>,
         imgLink: 'img/coffee.jpg',
@@ -50,8 +55,7 @@ class App extends Component {
         title: 'Resume',
         description: 'A formal resume',
         button: 'PDF Here!'
-      },
-      {
+      }, {
         id: 'contact',
         component: <ContactComponent/>,
       imgLink: 'img/contact_us.png',
@@ -62,6 +66,8 @@ class App extends Component {
       }
     ]
     this.typingEffect = this.typingEffect.bind(this)
+    this.isInViewport = this.isInViewport.bind(this)
+    this.updateMenuNavbar = this.updateMenuNavbar.bind(this)
     this.state = {
       myDesc : "Developer, Engineer, Fixer",
       i: 0,
@@ -89,23 +95,30 @@ class App extends Component {
         return state
       })
   }
-  isInViewport(offset = 0) {
-    if (!this.yourElement) return false;
-    const top = this.yourElement.getBoundingClientRect().top;
+  isInViewport(offset = 0, element) {
+    if (!element) return false;
+    const top = element.getBoundingClientRect().top;
     return (top + offset) >= 0 && (top - offset) <= window.innerHeight;
   }
+  updateMenuNavbar(scrollEvent) {
+    console.log(scrollEvent)
+    if (this.isInViewport(scrollEvent.target)) {
+      console.log()
+    }
+  }
+
   render() {
     // setTimeout(this.typingEffect, 50)
     return (
           <div className='App'>
-          <header className='App-header'>
+          <header className='App-header' id="header">
             <MenuHeading subComponents={this.subComponents} activeState={this.state.activeState}/>
             <h1 className='App-title'>Mohammed Saqib: {this.state.myDesc}</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
           </header>
           <CarouselComponent subComponents={this.subComponents}/>
           {this.subComponents.map((subComp) => (
-            <div key={subComp.id}>
+            <div key={subComp.id} onScroll={this.updateMenuNavbar}>
               {subComp.component}
             </div>
           ))}
