@@ -12,6 +12,7 @@ class PortfolioItemComponent extends Component {
             <h2>{this.props.data.name}</h2>
           </a>
           <p>{this.props.data.description}</p>
+          {this.props.data.shouldExpand && <div className='detailed-description'>{this.props.data.detailedDescription}</div>}
           <a href={this.props.data.imgHref
             ? this.props.data.imgHref
             : this.props.data.url}><img src={this.props.data.imgLink} className='text-center mx-auto portfolio-image'/></a>

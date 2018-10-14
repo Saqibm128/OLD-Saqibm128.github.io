@@ -15,7 +15,7 @@ class ResumeComponent extends Component {
       <div id='resume' className='text-center'>
               <h3>Only need a resume?</h3>
               {
-                ! this.state.show ? <h3 class='btn btn-secondary' onClick={this.showIframe}>Reveal Me</h3> :
+                ! this.state.show ? <h3 className='btn btn-secondary' onClick={this.showIframe}>Reveal Me</h3> :
               <iframe src="https://drive.google.com/file/d/1NKA3kC8mo_pqR0O5QvoqxlOA9wbD-bal/preview" width="640" height="480"></iframe>
               }
               <br />

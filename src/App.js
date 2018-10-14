@@ -21,7 +21,7 @@ class App extends Component {
       {
         id: 'header',
         title: 'Mohammed Saqib',
-        hreflink: '#header'
+        hreflink: '#name'
       },
       {
         id: 'about',
@@ -111,9 +111,9 @@ class App extends Component {
     // setTimeout(this.typingEffect, 50)
     return (
           <div className='App'>
-          <header className='App-header' id="header">
+          <header className='App-header'>
             <MenuHeading subComponents={this.subComponents} activeState={this.state.activeState}/>
-            <h1 className='App-title'>Mohammed Saqib: {this.state.myDesc}</h1>
+            <h1 className='App-title' id="name">Mohammed Saqib: {this.state.myDesc}</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
           </header>
           <CarouselComponent subComponents={this.subComponents}/>

@@ -20,7 +20,7 @@ class MenuHeading extends Component {
           <div className='collapse navbar-collapse' id='navbarCollapse'>
             <ul className='navbar-nav mr-auto'>
               {this.props.subComponents.map((subComp, index) => (
-                <li key={subComp.title} id={subComp.id + "_nav"} className='nav-item'>
+                <li key={subComp.title} style={index===0 ? {'color':'#16a085'} : {}} id={subComp.id + "_nav"} className={index==0 ? 'nav-item active first-nav-item' : 'nav-item'}>
                   <a className='nav-link' href={subComp.hreflink}>{subComp.title}</a>
                 </li>
               ))}

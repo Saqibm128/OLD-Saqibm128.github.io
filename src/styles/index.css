@@ -227,3 +227,12 @@ div.port-item:hover, div.port-item:active {
 #navbarCollapse:hover {
   opacity: 1;
 }
+
+.first-nav-item .nav-item {
+  color: #16a085;
+}
+
+.col {
+  flex-grow: 1;
+  transition: all 400ms ease;
+}
