@@ -236,3 +236,9 @@ div.port-item:hover, div.port-item:active {
   flex-grow: 1;
   transition: all 400ms ease;
 }
+
+img {
+    vertical-align: middle;
+    /* max-height: 250px;
+    max-width: 160px; */
+}
