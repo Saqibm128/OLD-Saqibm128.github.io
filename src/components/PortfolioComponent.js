@@ -30,6 +30,13 @@ class PortfolioComponent extends Component {
         description: 'This Website! My portfolio driven by React and Bootstrap and hacked up over two weekends',
         shouldExpand: false
       }, {
+        idName: 'weekAtAGlanse',
+        url: 'https://github.com/Saqibm128/weekAtAGlanseAPI',
+        imgLink: 'img/weekAtAGlanse.PNG',
+        name: 'Week At A Glan$e',
+        description: 'A React app using ESRI map technology backed by a Flask server backend using SQLServer',
+        shouldExpand: false
+      }, {
         idName: 'ticTacToeRobot',
         url: 'https://github.com/Saqibm128/3790-cozmo',
         imgLink: 'img/cozmo.jpg',
@@ -75,16 +82,16 @@ class PortfolioComponent extends Component {
     var portfolioItemList = []
     var i = 0;
     //gonna hardcode in some **special** items first
-    for (i = i; i < 1; i++) {
-    portfolioItemList.push(
-        <div className='row portfolio' key={i}>
-          <PortfolioItemComponent onClick={this.onPortfolioItemClick} key={this.state.dataItems[i].idName} data={this.state.dataItems[i]}/>
-            <PortfolioItemComponent onClick={this.onPortfolioItemClick} key={this.state.dataItems[i + 1].idName} data={this.state.dataItems[i + 1]}/>
-
-        </div>
-      );
-    }
-    i++;
+    // for (i = i; i < 1; i++) {
+    // portfolioItemList.push(
+    //     <div className='row portfolio' key={i}>
+    //       <PortfolioItemComponent onClick={this.onPortfolioItemClick} key={this.state.dataItems[i].idName} data={this.state.dataItems[i]}/>
+    //         <PortfolioItemComponent onClick={this.onPortfolioItemClick} key={this.state.dataItems[i + 1].idName} data={this.state.dataItems[i + 1]}/>
+    //
+    //     </div>
+    //   );
+    // }
+    // i++;
 
     for (i = i; i < this.state.dataItems.length; i+=3) {
 
