@@ -28,7 +28,7 @@ class AboutComponent extends Component {
               <p>I enjoy software engineering and working on problems affecting healthcare today. I am actively seeking opportunities for Summer 2019.</p>
               <div className='minor-about-me'>
               <p>I am majoring in both Biomedical Engineering and Computer Science.</p>
-                <p>I will be graduating in May 2020.</p>
+                <p>I will be graduating in Dec 2019.</p>
               <p>I strive to improve myself and others. I believe it is my duty to do the best I can do.</p>
               </div>
             </div>
