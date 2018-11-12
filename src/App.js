@@ -13,6 +13,8 @@ import './styles/carousel.css';
 import './styles/animation.css';
 import './styles/index.css';
 
+var DisplayResumeContext = React.createContext(false)
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -111,6 +113,7 @@ class App extends Component {
     // setTimeout(this.typingEffect, 50)
     return (
           <div className='App'>
+          <DisplayResumeContext.Provider value={false}>
           <header className='App-header'>
             <MenuHeading subComponents={this.subComponents} activeState={this.state.activeState}/>
             <h1 className='App-title' id="name">Mohammed Saqib: {this.state.myDesc}</h1>
@@ -123,6 +126,7 @@ class App extends Component {
             </div>
           ))}
           <AcknowledgementComponent links={this.acknowledgments} />
+          </DisplayResumeContext.Provider>
           </div>
 
     );

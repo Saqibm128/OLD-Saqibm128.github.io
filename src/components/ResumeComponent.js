@@ -3,8 +3,14 @@ class ResumeComponent extends Component {
   constructor(props) {
     super(props)
     this.showIframe = this.showIframe.bind(this)
-    this.state = {
-      'show': false
+    if (props.show) {
+      this.state = {
+        'show': props.show
+      }
+    } else {
+      this.state = {
+        'show': false
+      }
     }
   }
   showIframe() {
