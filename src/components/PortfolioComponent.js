@@ -17,7 +17,7 @@ class PortfolioComponent extends Component {
       }, {
         idName: 'candyProject',
         url: 'https://github.com/Saqibm128/Candy-Visualization',
-        imgHref: 'http://ec2-18-217-140-91.us-east-2.compute.amazonaws.com:8000/',
+        imgHref: 'http://candy-viz.ml',
         imgLink: 'img/candyProject.png',
         name: 'Candy Visualization',
         description: 'A multigraph data visualization of survey data of favorite candies.',
