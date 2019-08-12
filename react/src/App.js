@@ -111,10 +111,13 @@ class App extends Component {
 
   render() {
     // setTimeout(this.typingEffect, 50)
+    this.headerStyle = {
+      "padding-bottom": "160px"
+    }
     return (
           <div className='App'>
           <DisplayResumeContext.Provider value={false}>
-          <header className='App-header'>
+          <header className='App-header' style={this.headerStyle}>
             <MenuHeading subComponents={this.subComponents} activeState={this.state.activeState}/>
             <h1 className='App-title' id="name">Mohammed Saqib: {this.state.myDesc}</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>

@@ -12,7 +12,15 @@ class MenuHeading extends Component {
 
   }
   render() {
+
+    this.bufferStyle = {
+      "height" : "30px",
+      "margin-left": 0,
+      "margin-right": 0,
+      "background-color" : "#16a085"
+    }
     return (
+      <div>
         <nav className='navbar navbar-expand-md navbar-dark fixed-top bg-dark' id="menu">
           <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
@@ -27,6 +35,8 @@ class MenuHeading extends Component {
             </ul>
           </div>
         </nav>
+
+        </div>
     )
   }
 }
