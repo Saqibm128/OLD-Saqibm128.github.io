@@ -28,7 +28,7 @@ class App extends Component {
       {
         id: 'about',
         component: <AboutComponent/>,
-        imgLink: 'img/coffee.jpg',
+        imgLink: '',
         hreflink: '#about',
         title: 'About Me',
         description: 'Personal details, goals & descriptions',
@@ -36,7 +36,7 @@ class App extends Component {
       }, {
         id: 'experiences',
         component: <ExperiencesComponent />,
-      imgLink: 'img/experiences.png',
+      imgLink: '',
         hreflink: '#experiences',
         title: 'Experiences',
         description: 'Companies, Responsibilities and Other Work Experiences',
@@ -44,7 +44,7 @@ class App extends Component {
       }, {
         id: 'portfolio',
         component: <PortfolioComponent/>,
-        imgLink: 'img/technology.jpg',
+        imgLink: '',
         hreflink: '#portfolio',
         title: 'Projects',
         description: 'Informative studies, interesting POCs & exciting implementations',
@@ -52,7 +52,7 @@ class App extends Component {
       }, {
         id: 'resume',
         component: <ResumeComponent/>,
-      imgLink: 'img/resume.png',
+      imgLink: '',
         hreflink: '#resume',
         title: 'Resume',
         description: 'A formal resume',
@@ -60,7 +60,7 @@ class App extends Component {
       }, {
         id: 'contact',
         component: <ContactComponent/>,
-      imgLink: 'img/contact_us.png',
+      imgLink: '',
         hreflink: '#contact',
         title: 'Contact Me',
         description: 'More sites & contact info',
@@ -112,7 +112,7 @@ class App extends Component {
   render() {
     // setTimeout(this.typingEffect, 50)
     this.headerStyle = {
-      "padding-bottom": "160px"
+      "padding-bottom": "100px"
     }
     return (
           <div className='App'>
@@ -122,7 +122,6 @@ class App extends Component {
             <h1 className='App-title' id="name">Mohammed Saqib: {this.state.myDesc}</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24" viewBox="0 0 24 24"><path className='hack-arrow' d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
           </header>
-          <CarouselComponent subComponents={this.subComponents}/>
           {this.subComponents.map((subComp) => (
             <div key={subComp.id} onScroll={this.updateMenuNavbar}>
               {subComp.component}
