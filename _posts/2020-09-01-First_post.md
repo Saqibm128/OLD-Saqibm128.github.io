@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "92 days till applications due: First Steps"
-date:   2020-09-01 23:23:54 -0500
+title:  "91 days till applications due: First Steps"
+date:   2020-09-01 00:00:00 -0500
 categories: gradapps intro
 ---
 
