@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "92 days till applications due: First Steps"
-date:   2020-05-25 23:23:54 -0500
-categories: personal programming
+date:   2020-09-01 23:23:54 -0500
+categories: gradapps intro
 ---
 
 I'm a CS and BME grad who's working at a software engineering startup called Patientco. I've had the feeling to start working on a blog for awhile now and to revamp this website as well. In particular, a mentor suggested that I try and create a blog to show my work over time and to catalog my thoughts.
