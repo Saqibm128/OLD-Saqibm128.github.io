@@ -12,3 +12,7 @@ I've done a few big things over time. Here are the most pertinent!
 2. I did research as an undergraduate for [MIBLAB](https://miblab.bme.gatech.edu/) at Georgia Tech. I did research for both sepsis prediction and seizure detection using a variety of algorithms and worked on data pipelines.
 3. I also was a teaching assistant for a class called Object Oriented Design and Analysis (CS 2340), where I helped mentor sophomore and junior CS students to make Android apps.
 4. I did a research internship in summer 2019 as part of Harvard [SIBMI](https://dbmi.hms.harvard.edu/education/summer-institute-biomedical-informatics).
+
+For more information, please view: https://www.linkedin.com/in/mohammed-saqib-39b019b9/
+
+You can also contact me at saqibm128@gmail.com
